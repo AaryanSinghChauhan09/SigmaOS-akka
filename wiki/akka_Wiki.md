@@ -1,64 +1,50 @@
-# SigmaOS-akka Component Wiki
+# SigmaOS-SigmaOS-akka Component Wiki
 
 ## Overview
-SigmaOS-akka provides Akka actor model and distributed computing support for the SigmaOS operating system. It demonstrates the actor model subsystem and distributed computing within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic actor initialization.
+SigmaOS-SigmaOS-akka provides GitHub description is a placeholder; component scope remains unclassified. for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Actor Abstraction
-- Fail-Fast on Actor Initialization Errors
-- Deterministic Actor Setup
-- Clear Abstraction Over Actor APIs
-- Composition over Inheritance for actor extensions
+- SigmaOS-akka Abstraction
+- Fail-Fast on SigmaOS-akka Initialization Errors
+- Deterministic SigmaOS-akka Setup
+- Clear Abstraction Over SigmaOS-akka APIs
+- Composition over Inheritance for SigmaOS-akka extensions
 
 ## Architecture
-SigmaOS-akka follows an actor pattern:
-- **Actor Core**: Provides actor system creation, message passing, and actor lifecycle management
-- **Distribution**: Supports remote actor communication, cluster membership, and distributed deployment
-- **Message Routing**: Supports message addressing, routing, and mailbox management
-- **Error Handling**: Fail-fast on invalid actor configurations or unsupported actor types
+SigmaOS-SigmaOS-akka follows a SigmaOS-akka pattern:
+- **SigmaOS-akka Core**: Provides SigmaOS-akka support, SigmaOS-akka management, and SigmaOS-akka tracking
+- **Management**: Supports SigmaOS-akka management, SigmaOS-akka configuration, and SigmaOS-akka lifecycle
+- **Tracking**: Supports SigmaOS-akka status, SigmaOS-akka tracking, and SigmaOS-akka lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-akka configurations or unsupported SigmaOS-akka types
 
 ## API
 The component provides the following public APIs:
-- `actor::system::create(system_name)` - Create a new actor system with given name
-- `actor::actor::spawn(system, behavior)` - Spawn a new actor in the given system
-- `actor::message::send(recipient, message)` - Send a message to an actor
-- `actor::cluster::join(node)` - Join an actor cluster node
-- Error types for actor failure scenarios or unsupported actor types
+-  - Manage a SigmaOS-akka by given configuration
+-  - Register a SigmaOS-akka by given name
+-  - Get SigmaOS-akka status and SigmaOS-akka availability
+-  - Track SigmaOS-akka management and SigmaOS-akka tracking
+- Error types for SigmaOS-akka failure scenarios or unsupported SigmaOS-akka types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific actor configuration
-2. **Act**: Execute the code under test (actor spawning, message sending)
-3. **Assert**: Verify the expected actor results
+1. **Arrange**: Set up test environment with specific SigmaOS-akka configuration
+2. **Act**: Execute the code under test (SigmaOS-akka init, SigmaOS-akka management)
+3. **Assert**: Verify the expected SigmaOS-akka results
 
 Example:
-```rust
-#[test]
-fn test_actor_spawn_aaa() {
-    // Arrange
-    let system = actor::system::create("test-system");
-    
-    // Act
-    let actor = actor::actor::spawn(system, |ctx| {});
-    
-    // Assert
-    assert!(actor.is_ok());
-    let spawned = actor.unwrap();
-    assert!(spawned.is_alive());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Actor initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all actor failure scenarios
-- Unit tests provided for actor system creation and message sending
-- Integration tests for full actor system with actual distributed deployment
+- Follows Rust best practices with 
+- SigmaOS-akka initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-akka failure scenarios
+- Unit tests provided for SigmaOS-akka management and configuration
+- Integration tests for full SigmaOS-akka system with actual SigmaOS-akka integration
 
 ## TODO
-- Add support for additional actor features (remote deployment, cluster sharding, persistence)
-- Expand message routing capabilities ( multicast, broadcast, router actors)
-- Add cluster management features (cluster singleton, downing, membership)
-- Create integration tests with actual distributed actor systems
-- Implement actor persistence and state management
+- Add support for additional SigmaOS-akka types
+- Expand SigmaOS-akka capabilities (SigmaOS-akka features, SigmaOS-akka configurations, SigmaOS-akka tracking)
+- Add lifecycle features (SigmaOS-akka tracking, SigmaOS-akka lifecycle, SigmaOS-akka propagation)
+- Create integration tests with actual SigmaOS-akka systems and SigmaOS-akka integration
+- Implement SigmaOS-akka persistence and SigmaOS-akka state management
